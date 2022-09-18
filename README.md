@@ -16,5 +16,5 @@ This breaks TOS, please use this at your own risk.
 
 # Help & Support
 
-- Join my [discord server](https://discord.gg/fuf8t4JWDV)
+- Join my [discord server](https://discord.gg/qCJwVERPRV)
 
