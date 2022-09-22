@@ -14,10 +14,10 @@ uvloop.install()
 
 # Set up
 PREFIX = "o!"
-TOKEN = "MTAxMTY5OTAwNzgzMzI1NjA0Ng.GM5ysF.zcc8hLckHYPls8W5yYaxcsPkMrf-52siD4Z5_s"
-CHANNEL_NAME = ["OMEGA"]
-ROLE_NAME = ["OMEGA"]
-SPAM_MSG = ["OMEGA CUM"]
+TOKEN = "MTAyMjMwODU0MjMwNjMyNDYxMQ.GDcXaa.qSNQ4P76L5uMtiJWvN3RinV5DvzJUj7M8bvLuo"
+CHANNEL_NAME = ["bad server"]
+ROLE_NAME = ["W]
+SPAM_MSG = ["FUCK THIS SERVER"]
 WEBHOOK_NAME = ["OMEGA"]
 with open('./omega.gif', 'rb') as f:
 	IMAGE = f.read()
